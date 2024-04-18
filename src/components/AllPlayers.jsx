@@ -10,6 +10,7 @@ export const AllPlayers = () => {
 			try {
 				const players = await fetchAllPlayers();
 				setPlayers(players);
+				//console.log(players);
 			} catch (err) {
 				console.log("useEffect error fetching all players!!!");
 			}
