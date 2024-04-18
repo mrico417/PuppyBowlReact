@@ -5,7 +5,7 @@ const fetchAllPlayers = async () => {
     try {
         const response = await fetch(`${APIURL}/players`);
         const result = await response.json();
-        console.log(result.data.players);
+        //console.log(result.data.players);
         return result.data.players ;
     } catch (err) {
         console.log(err)
@@ -13,4 +13,15 @@ const fetchAllPlayers = async () => {
 
 };
 
-export { fetchAllPlayers }
+const fetchPlayer = async (playerId) => {
+    try {
+        const response = await fetch(`${APIURL}/players/${playerId}`);
+        const result = await response.json();
+        console.log(result.data.player)
+        return result.data.player
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+export { fetchAllPlayers, fetchPlayer }
