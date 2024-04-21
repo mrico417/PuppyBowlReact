@@ -1,6 +1,8 @@
 const cohortName = '2401-ftb-mt-web-pt';
 const APIURL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}`;
 
+//API Documentation - https://fsa-puppy-bowl.herokuapp.com/api/
+
 const fetchAllPlayers = async () => {
     try {
         const response = await fetch(`${APIURL}/players`);
@@ -23,5 +25,6 @@ const fetchPlayer = async (playerId) => {
         console.log(err)
     }
 }
+
 
 export { fetchAllPlayers, fetchPlayer }

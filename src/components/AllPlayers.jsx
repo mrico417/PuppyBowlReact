@@ -20,10 +20,10 @@ export const AllPlayers = () => {
 	}, []);
 
 	return (
-		<div id="all-players-container">
+		<>
 			{players.map((player) => {
 				return <PlayerCard key={player.id} player={player} />;
 			})}
-		</div>
+		</>
 	);
 };
