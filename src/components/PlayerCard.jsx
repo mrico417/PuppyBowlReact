@@ -1,8 +1,14 @@
 import { useNavigate } from "react-router-dom";
+import { deletePlayer } from "../API/index";
 
 export const PlayerCard = ({ player }) => {
 	const navigate = useNavigate();
 
+	const handleDelete = async (playerId) => {
+		const response = await deletePlayer(playerId);
+
+		if (response.success) navigate(`/`);
+	};
 	return (
 		<div className="player_card">
 			<img className="player_photo" src={player.imageUrl} />
@@ -12,6 +18,7 @@ export const PlayerCard = ({ player }) => {
 			<button onClick={() => navigate(`/players/${player.id}`)}>
 				See details
 			</button>
+			<button onClick={() => handleDelete(`${player.id}`)}>Delete</button>
 		</div>
 	);
 };

@@ -6,14 +6,12 @@ import { AddNewPlayer } from "./AddNewPlayer";
 export const Mainsection = () => {
 	return (
 		<div id="main-section">
-			<div id="main-section-container">
-				<Routes>
-					<Route path="/" element={<AllPlayers />} />
-					<Route path="/players" element={<AllPlayers />} />
-					<Route path="/players/:playerId" element={<SinglePlayer />} />
-					<Route path="/AddNewPlayer" element={<AddNewPlayer />} />
-				</Routes>
-			</div>
+			<Routes>
+				<Route path="/" element={<AllPlayers />} />
+				<Route path="/players" element={<AllPlayers />} />
+				<Route path="/players/:playerId" element={<SinglePlayer />} />
+				<Route path="/AddNewPlayer" element={<AddNewPlayer />} />
+			</Routes>
 		</div>
 	);
 };
