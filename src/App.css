@@ -20,28 +20,54 @@
       flex-grow: 1;
 }
 
-  
-#main-section-container {
+
+.add-new-player-container {
     display: flex;
     flex-flow: row wrap;
     gap: 10px 10px;
     align-items: center;
     justify-content: center;
     background-color: rosybrown;
- }
-  
-#all-players-container {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px 10px;
-    align-items: center;
-    justify-content: center;
-    background-color: rosybrown;
+ } 
+
+.cls-all-players-main-container {
+  display: grid;
+  grid-template-rows: 10px auto 10px auto;
+  justify-content: center;
+  background-color: rosybrown;
+}
+
+ .cls-search-container {
+  display: flex;
+  justify-content: center; 
+}
+
+.cls-row-spacer {
+  display: flex;
+  min-width: 290px;
+}
+
+.cls-search-container > label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: purple;
 }
   
+
+.all-players-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
 .player_card {
     display: flex;
-    flex: 0 1 275px;
+    flex: 0 1 200px;
     height: fit-content;
     border-radius: 5px;
     border: 1px solid red;
